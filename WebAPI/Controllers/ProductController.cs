@@ -18,9 +18,9 @@ namespace WebApi.Controllers
         /// <summary>
         /// Public constructor to initialize product service instance
         /// </summary>
-        public ProductController()
+        public ProductController(IProductServices productServices)
         {
-            _productServices = new ProductServices();
+            _productServices = productServices;
         }
 
         #endregion
