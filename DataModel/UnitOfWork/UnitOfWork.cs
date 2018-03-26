@@ -13,7 +13,7 @@ namespace DataModel.UnitOfWork
     /// <summary>     
     /// Unit of Work class responsible for DB transactions     
     /// </summary>     
-    public class UnitOfWork : IDisposable
+    public class UnitOfWork : IDisposable, IUnitOfWork
     {
         #region Private member variables... 
         private WebApiDbEntities _context = null;

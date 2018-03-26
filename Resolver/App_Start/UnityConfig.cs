@@ -1,12 +1,8 @@
 using System;
-using DataModel.UnitOfWork;
-using BusinessServices;
-using Unity;
-//using Microsoft.Practices.Unity;
-//using Unity.AspNet.Mvc;
-using Resolver;
 
-namespace WebAPI
+using Unity;
+
+namespace Resolver
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.
@@ -46,12 +42,6 @@ namespace WebAPI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            //container.RegisterType<IProductServices, ProductServices>().RegisterType<UnitOfWork>(new PerRequestLifetimeManager()); 
-
-
-            //Component initialization via MEF
-            ComponentLoader.LoadContainer(container, ".\\bin", "WebApi.dll");
-            ComponentLoader.LoadContainer(container, ".\\bin", "BusinessServices.dll");
         }
     }
 }
