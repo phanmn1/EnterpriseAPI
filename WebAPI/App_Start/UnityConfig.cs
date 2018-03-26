@@ -1,7 +1,7 @@
 using System;
-using Unity;
-using BusinessServices;
 using DataModel.UnitOfWork;
+using BusinessServices;
+using Unity;
 
 namespace WebAPI
 {
@@ -43,8 +43,8 @@ namespace WebAPI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            //container.RegisterType<IProductServices, ProductServices>();
-            container.RegisterType<UnitOfWork>();
+            container.RegisterType<IProductServices, ProductServices>().RegisterType<UnitOfWork>(); 
+            //container.RegisterType<>
         }
     }
 }
