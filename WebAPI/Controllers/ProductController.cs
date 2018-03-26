@@ -39,6 +39,10 @@ namespace WebApi.Controllers
         }
 
         // GET api/product/5
+        [Route("productid/{id?}")]
+        [Route("particularproduct/{id?}")]
+        [Route("myproduct/id:range(1,3)")]
+        [HttpGet]
         public HttpResponseMessage Get(int id)
         {
             var product = _productServices.GetProductById(id);

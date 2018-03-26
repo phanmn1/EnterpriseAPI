@@ -113,7 +113,6 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ComponentLoader.cs" />
     <Compile Include="IComponent.cs" />
     <Compile Include="IRegisterComponent.cs" />
