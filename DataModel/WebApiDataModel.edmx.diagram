@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ed2994f5d3584e7aaec20fd7908016f4" Name="Diagram1">
-        <EntityTypeShape EntityType="WebApiDbModel.Product" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="WebApiDbModel.Token" Width="1.5" PointX="3" PointY="0.875" />
-        <EntityTypeShape EntityType="WebApiDbModel.User" Width="1.5" PointX="0.75" PointY="1" />
-        <AssociationConnector Association="WebApiDbModel.FK_Tokens_User" />
+      <Diagram DiagramId="af3d136a6882458380611e927ede2482" Name="Diagram1">
+        <EntityTypeShape EntityType="WebApiDbModel.Product" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApiDbModel.Token" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApiDbModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="WebApiDbModel.FK_Tokens_User" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

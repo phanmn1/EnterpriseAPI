@@ -5,15 +5,19 @@ using System.Net.Http;
 using System.Web.Http;
 using BusinessEntities;
 using BusinessServices;
+using AttributeRouting.Web.Http;
+using WebApi.ActionFilters;
+
 
 namespace WebApi.Controllers
 {
+    [AuthorizationRequired]
     public class ProductController : ApiController
     {
 
         private readonly IProductServices _productServices;
 
-        #region Public Constructor
+         #region Public Constructor
 
         /// <summary>
         /// Public constructor to initialize product service instance
@@ -25,24 +29,20 @@ namespace WebApi.Controllers
 
         #endregion
 
-        // GET api/product
+        // GET api/product        
         public HttpResponseMessage Get()
         {
             var products = _productServices.GetAllProducts();
-            if (products != null)
-            {
-                var productEntities = products as List<ProductEntity> ?? products.ToList();
-                if (productEntities.Any())
-                    return Request.CreateResponse(HttpStatusCode.OK, productEntities);
-            }
+            var productEntities = products as List<ProductEntity> ?? products.ToList();
+            if (productEntities.Any())
+                return Request.CreateResponse(HttpStatusCode.OK, productEntities);
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Products not found");
         }
 
         // GET api/product/5
-        [Route("productid/{id?}")]
-        [Route("particularproduct/{id?}")]
-        [Route("myproduct/id:range(1,3)")]
-        [HttpGet]
+        [GET("productid/{id?}")]
+        [GET("particularproduct/{id?}")]
+        [GET("myproduct/{id:range(1, 3)}")]
         public HttpResponseMessage Get(int id)
         {
             var product = _productServices.GetProductById(id);
@@ -60,7 +60,7 @@ namespace WebApi.Controllers
         // PUT api/product/5
         public bool Put(int id, [FromBody]ProductEntity productEntity)
         {
-            if (id > 0)
+            if (id  > 0)
             {
                 return _productServices.UpdateProduct(id, productEntity);
             }

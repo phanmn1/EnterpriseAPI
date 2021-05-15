@@ -6,14 +6,14 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace WebAPI.Areas.HelpPage
+namespace WebApi.Areas.HelpPage
 {
     /// <summary>
     /// This class will create an object of a given type and populate it with sample data.
     /// </summary>
     public class ObjectGenerator
     {
-        internal const int DefaultCollectionSize = 2;
+        private const int DefaultCollectionSize = 3;
         private readonly SimpleTypeObjectGenerator SimpleObjectGenerator = new SimpleTypeObjectGenerator();
 
         /// <summary>

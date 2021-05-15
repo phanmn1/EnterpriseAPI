@@ -10,7 +10,7 @@ namespace DataModel
     {
         public void SetUp(IRegisterComponent registerComponent)
         {
-            registerComponent.RegisterType<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            registerComponent.RegisterType<IUnitOfWork,UnitOfWork.UnitOfWork>();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace WebAPI.Areas.HelpPage
+namespace WebApi.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {
@@ -31,7 +31,7 @@ namespace WebAPI.Areas.HelpPage
                 localPath.Replace("/", "-").Replace("{", String.Empty).Replace("}", String.Empty));
             if (queryKeyString != null)
             {
-                friendlyPath.AppendFormat("_{0}", queryKeyString.Replace('.', '-'));
+                friendlyPath.AppendFormat("_{0}", queryKeyString);
             }
             return friendlyPath.ToString();
         }
